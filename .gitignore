@@ -1,2 +1,4 @@
 *.egg-info
 *.pyc
+pythonpyramid/images/*
+pythonpyramid/images/thumbnails/*

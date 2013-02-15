@@ -93,6 +93,7 @@ class ImageUpload(Image):
 
     @view_config(request_method='GET', renderer="json")
     def get(self):
+        print "GETTING!!!"
         p = self.request.matchdict.get('name')
         if p:
             return self.fileinfo(p)
@@ -101,6 +102,7 @@ class ImageUpload(Image):
             for f in os.listdir(os.path.join('pyramidpython',*IMAGEPATH)):
                 n = self.fileinfo(f)
                 if n:
+                    print "n:",n
                     filelist.append(n)
             return filelist
 
